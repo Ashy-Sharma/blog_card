@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Blog preview card</title>
+
+    <style>
+      @font-face {
+        font-family: "font1";
+        src: url("assets/fonts/Figtree-Italic-VariableFont_wght.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "font2";
+        src: url("assets/fonts/Figtree-VariableFont_wght.ttf")
+          format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5d04e;
+      }
+
+      .card {
+        background-color: #ffff;
+        display: flex;
+        flex-direction: column;
+        border: solid black;
+        overflow: hidden;
+        width: min(90%, 500px);
+        max-height: calc(100vh - 2rem);
+        border-radius: 20px;
+        padding: 1rem;
+        margin: 1rem;
+        border-width: 2px;
+        box-shadow: 5px 5px 2px rgb(0, 0, 0, 1);
+      }
+
+      .img {
+        display: flex;
+        overflow: hidden;
+        background-image: url(assets/images/illustration-article.svg);
+        aspect-ratio: 336 / 201;
+        width: 100%;
+        flex-shrink: 0;
+        max-height: 43.9vh;
+        margin: auto;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #ffff;
+      }
+
+      .button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 1rem auto auto 0;
+        width: 90%;
+        max-width: 150px;
+      }
+
+      .button > button {
+        background-color: #f5d04e;
+        display: inline-block;
+        width: auto;
+        min-width: 80px;
+        height: auto;
+        border-radius: 5px;
+        font-family: font2;
+        font-weight: 900;
+        padding: 0.7rem 0.3rem;
+        border: none;
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+      }
+
+      .content {
+        display: block;
+        background-color: #ffff;
+      }
+      .content > p {
+        background-color: #ffff;
+      }
+
+      .content > h1 {
+        background-color: #ffff;
+        font-family: font2;
+        font-weight: 900;
+        font-size: clamp(2rem, 4vw, 2rem);
+      }
+
+      #publish-date {
+        font-family: font2;
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+      }
+
+      #description {
+        font-family: font2;
+        color: #8b8b8b;
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+      }
+
+      .author {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem;
+        background-color: #ffff;
+      }
+
+      .author> img {
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .author > p {
+        margin: 0;
+        font-family: font2;
+        font-weight: bold;
+        font-size: clamp(1rem, 2vw, 1.2rem);
+        background-color: #ffff;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="img"></div>
+      <div class="button">
+        <button>Learning</button>
+      </div>
+      <div class="content">
+        <p id="publish-date">Published 21 Dec 2023</p>
+
+        <h1>HTML & CSS foundations</h1>
+
+        <p id="description">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+      </div>
+      <div class="author">
+        <img src="assets/images/image-avatar.webp" />
+        <p>Greg Hooper</p>
+      </div>
+    </div>
+
+    <div class="attribution"></div>
+  </body>
+</html>
